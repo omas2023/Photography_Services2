@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 22px;
+  background-color: black;
+  margin-bottom: -10%;
+  margin-top: -10%;
+}
+
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 50px;
+    top: 0px;
+  }
+  25% {
+    background-color: rgba(255, 255, 0, 0);
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: rgb(17, 1, 16);
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: rgb(61, 3, 6);
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: rgba(133, 122, 1, 0.799);
+    left: 0px;
+    top: 0px;
+  }
+}
+.container2:hover {
+  animation: shake 0.5s;
+  /* animation-iteration-count: infinite; */
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.container2 {
+  position: absolute;
+  bottom: 30px;
+  background: rgb(5, 0, 9);
+  width: 370px;
+  height: 370px;
+  border-radius: 50%;
+  box-shadow: rgb(37, 1, 37) 10px 30px 4px 5px;
+  animation-name: example;
+  animation-duration: 8s;
+  animation-delay: -2s;
+}
+.container {
+  /* position: relative; the planet*/
+  max-width: 1100px;
+  /* margin: 2 auto; */
+  margin-bottom: 20%;
+  margin-left: 20%;
+  /* }
+
+  .container img {
+    vertical-align: middle; */
+}
+
+.container .content {
+  position: absolute;
+  bottom: 10;
+  background: rgb(223, 0, 0); /* Fallback color */
+  background: rgba(52, 11, 66, 0.336); /* Black background with 0.5 opacity */
+  color: #f6f5f5;
+  width: 650px;
+  height: 650px;
+  margin-top: -60%;
+  border-radius: 50%;
+  margin-left: 30%;
+  justify-items: center;
+  text-align: center;
+  box-shadow: rgb(20, 4, 28) 20px 30px 40px 5px;
+  position: relative;
+}

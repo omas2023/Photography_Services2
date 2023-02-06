@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial;
+        font-size: 22px;
+        background-color: black;
+        margin-bottom: -10%;
+        margin-top: -10%;
+      }
+
+      @keyframes example {
+        0% {
+          background-color: red;
+          left: 50px;
+          top: 0px;
+        }
+        25% {
+          background-color: rgba(255, 255, 0, 0);
+          left: 200px;
+          top: 0px;
+        }
+        50% {
+          background-color: rgb(17, 1, 16);
+          left: 200px;
+          top: 200px;
+        }
+        75% {
+          background-color: rgb(61, 3, 6);
+          left: 0px;
+          top: 200px;
+        }
+        100% {
+          background-color: rgba(133, 122, 1, 0.799);
+          left: 0px;
+          top: 0px;
+        }
+      }
+      .container2:hover {
+        animation: shake 0.5s;
+        /* animation-iteration-count: infinite; */
+      }
+
+      @keyframes shake {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+      .container2 {
+        position: absolute;
+        bottom: 30px;
+        background: rgb(5, 0, 9);
+        width: 370px;
+        height: 370px;
+        border-radius: 50%;
+        box-shadow: rgb(37, 1, 37) 10px 30px 4px 5px;
+        animation-name: example;
+        animation-duration: 8s;
+        animation-delay: -2s;
+      }
+      .container {
+        /* position: relative; the planet*/
+        max-width: 1100px;
+        /* margin: 2 auto; */
+        margin-bottom: 20%;
+        margin-left: 20%;
+        /* }
+
+      .container img {
+        vertical-align: middle; */
+      }
+
+      .container .content {
+        position: absolute;
+        bottom: 10;
+        background: rgb(223, 0, 0); /* Fallback color */
+        background: rgba(
+          52,
+          11,
+          66,
+          0.336
+        ); /* Black background with 0.5 opacity */
+        color: #f6f5f5;
+        width: 650px;
+        height: 650px;
+        margin-top: -60%;
+        border-radius: 50%;
+        margin-left: 30%;
+        justify-items: center;
+        text-align: center;
+        box-shadow: rgb(20, 4, 28) 20px 30px 40px 5px;
+        position: relative;
+      }
+
+      .body2 {
+        background-color: #100e17;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .container6 {
+        position: absolute;
+        height: 300px;
+        width: 600px;
+        top: 60px;
+        left: calc(50% - 300px);
+        display: flex;
+      }
+
+      .card {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: #1f055456;
+        border-radius: 10px;
+        box-shadow: -1rem 0 3rem rgba(176, 176, 11, 0.444);
+        /*   margin-left: -50px; */
+        transition: 0.4s ease-out;
+        position: relative;
+        left: 30px;
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      .card:not(:first-child) {
+        margin-left: 40px;
+      }
+
+      .card:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+      }
+
+      .card:hover ~ .card {
+        position: relative;
+        left: 50px;
+        transition: 0.4s ease-out;
+      }
+
+      .title {
+        color: white;
+        font-weight: 300;
+        position: absolute;
+        left: 20px;
+        top: 15px;
+      }
+
+      .bar {
+        position: absolute;
+        top: 100px;
+        left: 20px;
+        height: 10px;
+        width: 180px;
+      }
+
+      .emptybar {
+        background-color: #4e6a9579;
+        width: 100%;
+        height: 100%;
+      }
+
+      .filledbar {
+        position: absolute;
+        top: 0px;
+        z-index: 3;
+        width: 0px;
+        height: 100%;
+        background: rgb(0, 154, 217);
+        background: linear-gradient(
+          90deg,
+          rgba(0, 154, 217, 1) 0%,
+          rgba(217, 147, 0, 1) 65%,
+          rgba(255, 186, 0, 1) 100%
+        );
+        transition: 0.6s ease-out;
+      }
+
+      .card:hover .filledbar {
+        width: 120px;
+        transition: 0.4s ease-out;
+      }
+
+      .circle {
+        /* position: absolute; */
+        top: 90px;
+        left: calc(40% - 60px);
+      }
+
+      .stroke {
+        stroke: rgb(39, 4, 115);
+        stroke-dasharray: 360;
+        stroke-dashoffset: 360;
+        transition: 0.6s ease-out;
+      }
+
+      svg {
+        fill: #4b07d301;
+        stroke-width: 2px;
+      }
+
+      .card:hover .stroke {
+        stroke-dashoffset: 100;
+        transition: 0.6s ease-out;
+      }
+      @media (min-width: 760px) {
+      }
+    </style>
+  </head>
+  <body>
+    <h2>About Me</h2>
+
+    <div class="container">
+      <img
+        src="img/s.jpg"
+        alt=""
+        style="
+          width: 1200px;
+          padding-left: 20%;
+          padding-right: 0%;
+          padding-top: 30%;
+          padding-bottom: 0%;
+          width: 160%;
+        "
+      />
+
+      <div class="container2">
+        <img
+          src="img/logoooooo.jpeg"
+          alt=""
+          style="
+            width: 200px;
+            height: 200px;
+            padding-left: 1%;
+            padding-right: 0%;
+            padding-top: 0%;
+            padding-bottom: 0%;
+            border-radius: 50%;
+            box-shadow: #000000 30px 25px 40px 10px;
+          "
+        />
+      </div>
+      <div class="content">
+        <br />
+        <h1
+          style="
+            text-shadow: rgb(15, 7, 7) 3px 4px 2px;
+            font-size: x-large;
+            margin: 0%;
+            text-decoration-line: underline;
+            color: rgb(57, 4, 126);
+          "
+        >
+          OMA AHMED
+        </h1>
+        <p
+          style="
+            margin: 10%;
+            font-size: small;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+              sans-serif;
+          "
+        >
+          About Me<br /><br />
+          Architectural and civil engineer<br />
+          master's degree in urban planning.<br />
+          Developer of pages and designer<br />
+          of sustainable buildings.<br /><br />Rograms I Work on <br /><br />*
+          sketch Up<br />*Auto Cad<br />*Photoshop<br /><br />Programming
+          Languages<br /><br />*HTML <br />*JavaScript
+          <br />*Css<br />*c++<br />*Python
+        </p>
+      </div>
+    </div>
+    <div class="container6">
+      <a href="./Portfolio.html">
+        <div class="card">
+          <h5 class="title">Web Devoloper</h5>
+          <div class="bar">
+            <div class="emptybar"></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="">
+              <circle class="stroke" cx="60" cy="60" r="50" />
+            </svg>
+          </div>
+        </div>
+      </a>
+      <a href="./contact.html">
+        <div class="card">
+          <h5 class="title">logos designer</h5>
+          <div class="bar">
+            <div class="" alt=""></div>
+            <div class="filledbar"></div>
+          </div>
+          <div class="circle">
+            <svg version="1.1" xmlns="">
+              <circle class="stroke" cx="60" cy="60" r="50" />
+            </svg>
+          </div>
+        </div>
+      </a>
+      <div class="card">
+        <h5 class="title">Architectural Drowing</h5>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+          <svg version="1.1" xmlns="">
+            <circle class="stroke" cx="60" cy="60" r="50" />
+          </svg>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="title">Photographey Services</h5>
+        <div class="bar">
+          <div class="emptybar"></div>
+          <div class="filledbar"></div>
+        </div>
+        <div class="circle">
+          <svg version="1.1" xmlns="">
+            <circle class="stroke" cx="60" cy="60" r="50" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
