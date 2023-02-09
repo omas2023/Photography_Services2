@@ -1,22 +1,15 @@
- .countinaer-0 {
+.container-0 {
   height: 200px;
   width: 200px;
   padding: 8%;
   background-image: url(/img/royal.jpg);
-
-  box-shadow: 90px 90px 200px 100px rgba(215, 218, 14, 0.451);
+  box-shadow: 90px 90px 200px 100px rgba(238, 10, 10, 0.275);
   border-radius: 50%;
   border: 2px dotted rgb(176, 172, 168);
-  /* padding-inline: 20px;
-    padding-top: 10%; */
   padding-left: 6%;
   margin-left: 5%;
   margin-right: 9%;
   margin-top: -16%;
-  /* }
-.button0:hover,.button-3,.button-4{
-  animation: shake 0.6s;
-  animation-iteration-count: infinite; */
 }
 
 @keyframes shake {
@@ -54,9 +47,10 @@
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
-.countinaer1 {
-  height: 330px;
-  width: 330px;
+
+.container-1 {
+  height: 200px;
+  width: 200px;
   opacity: 0.6px;
   margin-right: 80%;
   margin-top: 60%;
@@ -65,36 +59,37 @@
   opacity: 100%;
   border-radius: 50%;
   border: 3px dotted rgba(142, 7, 7, 0.073);
-  /* background-color: rgb(200, 255, 0); */
   background-image: conic-gradient(
     rgba(174, 0, 249, 0.775) 5deg,
     rgba(0, 71, 225, 0.436) 103deg,
-    rgba(109, 3, 215, 0.555) 10deg
+    rgba(70, 215, 3, 0.555) 10deg
   );
 }
-
-.countinaer2 {
-  background-image: url(/img/royal.jpg);
+.container-2 {
+  background-image: url(../img/royal.jpg);
   /* padding: 10%; */
-  position: absolute;
   background-attachment: fixed;
-  /* background-color: rgb(30, 16, 227); */
-  /* display: flex; */
   align-items: center;
   justify-content: flex-end;
-  height: 100px;
-  width: 100px;
-  box-shadow: 40px 35px 20px 20px rgb(139, 6, 6);
-  opacity: 100%;
-  border-radius: 100%;
-  font-size: xx-large;
-  border: 3px dotted rgba(180, 255, 4, 0);
+  font-size: x-large;
+  border: 3px dotted rgba(35, 33, 33, 0.933);
   margin-left: -1%;
-  /* margin-right: auto; */
   margin-top: 7%;
+  position: relative;
+  animation: mymove 5s infinite;
+  animation-timing-function: ease-in-out;
+  width: 400px;
+  height: 400px;
+  margin-bottom: 10%;
+  box-shadow: 20px 30px 2px rgba(71, 68, 71, 0.736);
+  animation-direction: alternate-reverse;
+  border-radius: 50%;
+  margin-left: 200%;
+
+  margin-top: 90%;
 }
 
-.button0 {
+.button-1 {
   display: flex;
   width: 250px;
   height: 250px;
@@ -103,9 +98,9 @@
   border-radius: 50%;
   /* border-radius: 0% 10% 0% 90%; */
   cursor: pointer;
-  background-color: #d80202c4;
+  background-color: #d88d0242;
   box-shadow: 85px 20px 40px 34px rgb(5, 5, 5);
-  border: 3px dotted rgb(25, 0, 215);
+  border: 3px dotted rgb(2, 123, 91);
   text-align: center;
   /* margin-left: 90%; */
   margin-bottom: -2%;
@@ -117,11 +112,11 @@
   margin-left: 95%;
 }
 
-.button {
+.button-2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1106a342;
+  background-color: #1fd31563;
   box-shadow: 40px 50px 22px 30px rgba(0, 0, 0, 0.664);
   border-radius: 50%;
   width: 140px;
@@ -141,7 +136,7 @@
   -webkit-transition-duration: 0.5s;
   transition-duration: 0.4s;
 }
-.countinaer:after {
+.container :after {
   content: "";
   background: #01ef01;
   display: block;
@@ -154,16 +149,16 @@
   transition: all 0.9s;
 }
 
-.countinaer:active:after {
+.container:active:after {
   padding: 0;
   margin: 0;
   opacity: 6;
-  transition: 8s;
+  transition: 4s;
 }
 
 .button-3 {
   display: flex;
-  background-color: #ae03a596;
+  background-color: #ae03a5f4;
   box-shadow: 55px 50px 12px rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
@@ -181,14 +176,13 @@
 }
 .button-4 {
   display: flex;
-  background-color: #05e3141a;
+  background-color: #0124e8;
   color: rgb(255, 255, 255);
   box-shadow: 40px 15px 20px 2px rgba(13, 4, 14, 0.587);
   text-decoration: underline rgb(10, 0, 10);
   text-shadow: #0d0c0c 3px 9px 2px;
   width: 100px;
   height: 100px;
-  /* border-radius: 50% 20% 20% 10%; */
   border-radius: 50%;
   margin-left: 70%;
   margin-top: -20%;
@@ -202,7 +196,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #06b98c00;
+  background-color: #04e5ad54;
   box-shadow: 40px 50px 22px 30px rgba(0, 0, 0, 0.664);
   border-radius: 50%;
   width: 90px;
@@ -214,36 +208,36 @@
   position: relative;
   text-decoration-color: rgb(123, 234, 5);
   text-decoration-line: underline;
-  text-shadow: #f80909 3px 4px 9px;
+  text-shadow: #f8090961 3px 4px 9px;
   position: static;
   border: 3px rgb(140, 14, 14) dotted;
   margin-left: 300%;
   margin-top: -290%;
-  -webkit-transition-duration: 0.8s;
-  transition-duration: 0.2s;
+  /* -webkit-transition-duration: 0.8s;
+  transition-duration: 0.2s; */
 }
-.button0:hover {
+.button-1:hover {
   background-color: #3e2524e5;
 }
 
-.button:hover {
-  background-color: #55db01;
+.button-2:hover {
+  background-color: #ba01db;
 }
 
 .button-3:hover {
   background-color: #2700d3;
 }
 
-.button2:hover {
+.button-4:hover {
   background-color: #00fbd1;
 }
 
-.button-4:hover {
+.button-5:hover {
   background-color: #6e05ee;
 }
 
 .button:active {
-  background-color: #cd00dc;
+  background-color: #dc7500;
   border-bottom: #9485c5;
 }
 
@@ -255,7 +249,7 @@
 }
 
 body {
-  background-image: url(/img/royal.jpg);
+  background-image: url(../img/royal.jpg);
   opacity: initial;
   /* background-repeat: no-repeat; */
   background-attachment: fixed;
@@ -271,7 +265,7 @@ h1 {
   margin-top: -100px;
   margin-left: 90px;
   background-color: #ed0000;
-  color: rgb(118, 5, 248);
+  color: rgb(66, 19, 116);
   font-family: courier;
   font-size: 680%;
   text-decoration: double;
@@ -281,7 +275,7 @@ h1 {
   padding-top: 100%;
   padding: 70%;
 }
-
+/* the text ashria serv.. */
 h2 {
   margin-left: 300px;
   color: rgb(255, 0, 0);
@@ -298,23 +292,17 @@ h2 {
   text-justify: inter-cluster;
 }
 
-.overlay {
-  width: 5px;
-  height: 5px;
-  background-color: rgb(244, 146, 146);
-}
-
 .footer {
-  background-color: #3f8b116d;
+  background-color: #2d68096d;
   width: 100%;
-  height: 170px;
   display: flex;
   justify-content: space-around;
   text-align: center;
   color: rgb(0, 0, 0);
   box-shadow: rgb(149, 127, 2) 10px 15px 21px 40px;
-  margin-bottom: 1%;
+  margin-bottom: 4%;
   margin-left: 3%;
+  padding-top: 10%;
 }
 
 .footer-title {
@@ -326,139 +314,38 @@ h2 {
   line-height: 1;
 }
 
-fieldset {
-  padding: 2em;
-}
-
-form {
-  width: 580px;
-  margin: 3em auto;
-  border: 5px dashed gray;
-  padding: 2em;
-}
-
-fieldset:has(input[type="text"], input[type="email"]) {
-  display: flex;
-  flex-direction: column;
-}
-
-input[type="text"],
-input[type="email"] {
-  border: 4px solid grey;
-  font-size: 22px;
-  background-color: black;
-  color: white;
-  border-radius: 3px;
-  transition: all 1s;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-  border: 4px solid rgb(247, 0, 247);
-  outline: 1px dotted gray;
-}
-
-input[type="email"]:invalid {
-  border: 4px solid red;
-}
-
-input[type="email"]:valid {
-  border: 4px solid green;
-}
-
-input[type="checkbox"] {
-  appearance: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  border: 4px solid black;
-}
-
-input[type="checkbox"]:checked {
-  background-color: red;
-  background-size: contain;
-}
-
-input[type="checkbox"]:checked::after {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 20px;
-  border-width: 0 4px 4px 0;
-  border-color: rgb(21, 0, 255);
-  border-style: solid;
-  transform: translateX(9px) translateY(0px) rotate(45deg);
-}
-
-input[type="radio"] {
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid white;
-  border-radius: 50%;
-  outline: 2px solid black;
-}
-
-input[type="radio"]:checked {
-  background-color: rgb(0, 13, 255);
-}
-
-.checks {
-  display: flex;
-  align-items: center;
-}
-
-.option {
-  margin: 10px;
-}
-
-.countinaer2 {
-  /* background-image: url(./img/blue\ 2.jpg); */
-
-  position: relative;
-  animation: mymove 4s infinite;
-  animation-timing-function: ease-in-out;
-  width: 410px;
-  height: 410px;
-  margin-bottom: 10%;
-  margin-top: 0%;
-  box-shadow: 20px 30px 2px rgb(23, 16, 16);
-  animation-direction: alternate-reverse;
-  border-radius: 50%;
-  padding-bottom: 0%;
-  padding-top: 0%;
-}
-
-@keyframes mymove {
-  from {
-    left: -80px;
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
   }
-
-  to {
-    right: 0%;
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
   }
-
-  from {
-    right: 0px;
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
   }
-
-  to {
-    left: 2800px;
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
   }
-
-  from {
-    top: 0px;
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
   }
-
-  to {
-    bottom: 90px;
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
   }
-
-  from {
-    top: 280px;
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
   }
-
-  to {
-    bottom: 320px;
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
